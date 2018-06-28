@@ -1,0 +1,162 @@
+<!doctype html><!--申明文档类型是html-->
+<html>
+ <head>
+  <meta charset="utf-8"><!--字符编码格式为国际编码utf-8-->
+  <meta name="Author" content="1">
+  <meta name="Keywords" content="2">
+  <meta name="Description" content="3">
+  <title></title>
+  <style>
+	body, p, ul, dl, dd, ol, h1, h2, h3, h4, h5{ margin:0;}
+	ul,ol{ padding-left:0;list-style:none;}
+	em,i{ font-style:normal;/*设置字体样式：正常显示（就是不倾斜）*/}
+	strong,b{ font-weight:normal;/*设置字体加粗：正常显示（就是不加粗）*/}
+	a{ text-decoration:none;/*去掉下划线*/}
+  
+	.hei{
+		width:400px;
+		height:200px;
+		margin:200px auto;
+	}
+	.box{
+		width:200px;
+		height:200px;
+		transform:rotate(-45deg);
+		transform-origin:right bottom;
+		animation:zhuan 2s linear 4s infinite;
+	}
+	.box li{
+		position:absolute;
+		top:0;
+		left:0;
+		width:200px;
+		height:200px;
+		background-color:#ff9999;
+		border-radius:0 100%;
+		animation:4s ;
+		transform-origin:right bottom;
+		border:1px solid #fff;
+		animation-fill-mode:forwards;
+	}
+	.box li:nth-child(1){
+		animation-name:ban1;
+	}
+	@keyframes ban1{
+		100%{
+			transform:rotate(30deg) ;
+		}
+	}
+	.box li:nth-child(2){
+		animation-name:ban2;
+	}
+	@keyframes ban2{
+		100%{
+			transform:rotate(60deg);
+		}
+	}
+	.box li:nth-child(3){
+		animation-name:ban3;
+	}
+	@keyframes ban3{
+		100%{
+			transform:rotate(90deg);
+		}
+	}
+	.box li:nth-child(4){
+		animation-name:ban4;
+	}
+	@keyframes ban4{
+		100%{
+			transform:rotate(120deg);
+		}
+	}
+	.box li:nth-child(5){
+		animation-name:ban5;
+	}
+	@keyframes ban5{
+		100%{
+			transform:rotate(150deg);
+		}
+	}
+	.box li:nth-child(6){
+		animation-name:ban6;
+	}
+	@keyframes ban6{
+		100%{
+			transform:rotate(180deg);
+		}
+	}
+	.box li:nth-child(7){
+		animation-name:ban7;
+	}
+	@keyframes ban7{
+		100%{
+			transform:rotate(210deg);
+		}
+	}
+	.box li:nth-child(8){
+		animation-name:ban8;
+	}
+	@keyframes ban8{
+		100%{
+			transform:rotate(240deg);
+		}
+	}
+	.box li:nth-child(9){
+		animation-name:ban9;
+	}
+	@keyframes ban9{
+		100%{
+			transform:rotate(270deg);
+		}
+	}
+	.box li:nth-child(10){
+		animation-name:ban10;
+	}
+	@keyframes ban10{
+		100%{
+			transform:rotate(300deg);
+		}
+	}
+	.box li:nth-child(11){
+		animation-name:ban11;
+	}
+	@keyframes ban11{
+		100%{
+			transform:rotate(330deg);
+		}
+	}
+	.box li:nth-child(12){
+		animation-name:ban12;
+	}
+	@keyframes ban12{
+		100%{
+			transform:rotate(360deg);
+		}
+	}
+	@keyframes zhuan{
+		100%{
+		transform:rotate(315deg);
+		}
+	}
+  </style>
+ </head>
+ <body>
+	<div class="hei">
+		<ul class="box">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+ </body>
+</html>

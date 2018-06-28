@@ -1,0 +1,126 @@
+<!doctype html><!--申明文档类型是html-->
+<html>
+ <head>
+  <meta charset="utf-8"><!--字符编码格式为国际编码utf-8-->
+  <meta name="Author" content="1">
+  <meta name="Keywords" content="2">
+  <meta name="Description" content="3">
+  <title></title>
+  <style>
+	body, p, ul, dl, dd, ol, h1, h2, h3, h4, h5{ margin:0;}
+	ul,ol{ padding-left:0;list-style:none;}
+	em,i{ font-style:normal;/*设置字体样式：正常显示（就是不倾斜）*/}
+	strong,b{ font-weight:normal;/*设置字体加粗：正常显示（就是不加粗）*/}
+	a{ text-decoration:none;/*去掉下划线*/}
+  
+	body{
+		background-color:#003300;
+		overflow:hidden;
+	}
+	.box{
+		position:relative;
+		width:70px;
+		height:150px;
+		margin:200px;
+		animation:aaa 5s infinite ease-in-out;
+	}
+	.box .head{
+		position:absolute;
+		top:5px;
+		left:-5px;
+		width:30px;
+		height:30px;
+		border-radius:50%;
+		background-color:#000;
+		transform-origin:bottom;
+		animation:bbb 2s infinite alternate;
+	}
+	.box .head:before{
+		position:absolute;
+		top:-10px;
+		left:5px;
+		content:"";
+		width:20px;
+		height:10px;
+		border-radius:5px 5px 0 0;
+		background-color:#fff;
+	}
+	.box .head:after{
+		position:absolute;
+		top:0px;
+		left:-5px;
+		display:block;
+		content:"";
+		width:40px;
+		height:10px;
+		border-radius:5px;
+		background-color:#fff;
+	}
+	.box .body{
+		position:absolute;
+		top:37px;
+		width:0;
+		height:60px;
+		border-left:3px solid #fff;
+	}
+	.box .hei{
+		position:absolute;
+		top:40px;
+		left:2px;
+		width:40px;
+		height:45px;
+		border:2px solid #fff;
+		border-top:none;
+		border-right:none;
+		transform-origin:0% 0%;
+		animation:ccc 1s infinite;
+	}
+	.box .foot{
+		position:absolute;
+		top:96px;
+		left:2px;
+		width:60px;
+		height:65px;
+		border:2px solid #fff;
+		border-bottom:none;
+		border-left:none;
+		transform-origin:0% 0%;
+		animation:ddd 1s infinite;
+	}
+	.box .right{
+		animation-delay:.5s;
+	}
+	@keyframes aaa{
+		0%{transform:translateX(-270px)}
+		100%{transform:translateX(1500px)}
+	}
+	@keyframes bbb{
+		0%{transform:rotateZ(20deg)}
+		25%{transform:rotateZ(-30deg) skew(15deg,0deg)}
+		50%{transform:rotateZ(20deg)}
+		75%{transform:rotateZ(-30deg) skew(15deg,0deg)}
+		100%{transform:rotateZ(20deg)}
+	}
+	@keyframes ccc{
+		0%{transform:rotateZ(80deg)}
+		50%{transform:rotate(-70deg)}
+		100%{transform:rotate(80deg)}
+	}
+	@keyframes ddd{
+		0%{transform:rotateZ(-5deg)}
+		50%{transform:rotate(150deg)}
+		100%{transform:rotate(-5deg)}
+	}
+  </style>
+ </head>
+ <body>
+	<div class="box">
+		<div class="head"></div>
+		<div class="body"></div>
+		<div class="hei ledt"></div>
+		<div class="hei right"></div>
+		<div class="foot"></div>
+		<div class="foot right"></div>
+	</div>
+ </body>
+</html>

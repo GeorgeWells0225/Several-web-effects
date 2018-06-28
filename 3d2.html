@@ -1,0 +1,157 @@
+<!doctype html><!--申明文档类型是html-->
+<html>
+ <head>
+  <meta charset="utf-8"><!--字符编码格式为国际编码utf-8-->
+  <meta name="Author" content="1">
+  <meta name="Keywords" content="2">
+  <meta name="Description" content="3">
+  <title></title>
+  <style>
+	body, p, ul, dl, dd, ol, h1, h2, h3, h4, h5{ margin:0;}
+	ul,ol{ padding-left:0;list-style:none;}
+	em,i{ font-style:normal;/*设置字体样式：正常显示（就是不倾斜）*/}
+	strong,b{ font-weight:normal;/*设置字体加粗：正常显示（就是不加粗）*/}
+	a{ text-decoration:none;/*去掉下划线*/}
+	body{
+		background-color:#66cc00;
+	}
+	.box{
+		width:200px;
+		height:200px;
+		margin:300px auto;
+		border:1px solid #000;
+		perspective:1000px;
+	}
+	.zhuan{
+		position:relative;
+		transform-style:preserve-3d;
+		transition:4s;
+	}
+	div.direction{
+		position:absolute;
+		width:200px;
+		height:200px;
+		border:1px solid #ff3366;
+		text-align:center;
+		line-height:200px;
+		font-weight:bold;
+	}
+	.zhuan div.top{
+		top:-200px;
+		left:0;
+		transform-origin:bottom;
+		transform:translateZ(100px) rotateX(90deg) ;
+		transition:4s;
+	}
+	.zhuan div.bottom{
+		top:200px;
+		left:0;
+		transform-origin:top;
+		transform:translateZ(100px) rotateX(-90deg);
+	}
+	.zhuan div.left{
+		top:0;
+		left:-200px;
+		transform-origin:right;
+		transform:translateZ(100px) rotateY(-90deg);
+	}
+	.zhuan div.right{
+		top:0;
+		left:200px;
+		transform-origin:left;
+		transform: translateZ(100px) rotateY(90deg) ;
+	}
+	.zhuan div.qian{
+		top:0;
+		left:0;
+		transform:translateZ(100px) rotateX(0deg) ;
+	}
+	.zhuan div.hou{
+		top:0;
+		left:0;
+		transform:translateZ(-100px) rotateX(0deg) ;
+	}
+
+	.box:hover .zhuan{
+		transform:rotateY(360deg);
+	}
+	.box:hover div.top{
+		transform:translateZ(100px) rotateX(-50deg);
+	}
+	.small{
+		transform-style:preserve-3d;
+		transform:translateZ(-50px) translateY(50px) translateX(50px);
+		transition:5s;
+	}
+	.box:hover .small{
+		transform:translateZ(-50px) translateY(-200px) translateX(50px);
+	}
+	p.direction{
+		position:absolute;
+		width:100px;
+		height:100px;
+		border:1px solid #ff3366;
+		text-align:center;
+		line-height:100px;
+		font-weight:bold;
+	}
+	.zhuan p.top{
+		top:-100px;
+		left:0;
+		transform-origin:bottom;
+		transform:translateZ(100px) rotateX(90deg) ;
+		transition:4s;
+	}
+	.zhuan p.bottom{
+		top:100px;
+		left:0;
+		transform-origin:top;
+		transform:translateZ(100px) rotateX(-90deg);
+	}
+	.zhuan p.left{
+		top:0;
+		left:-100px;
+		transform-origin:right;
+		transform:translateZ(100px) rotateY(-90deg);
+	}
+	.zhuan p.right{
+		top:0;
+		left:100px;
+		transform-origin:left;
+		transform: translateZ(100px) rotateY(90deg) ;
+	}
+	.zhuan p.qian{
+		top:0;
+		left:0;
+		transform:translateZ(100px) rotateX(0deg) ;
+	}
+	.zhuan p.hou{
+		top:0;
+		left:0;
+		transform:translateZ(0px) rotateX(0deg) ;
+	}
+
+  </style>
+ </head>
+ <body>
+ <div class="box">
+	<div class="zhuan">
+		<div class="direction top">top</div>
+		<div class="direction bottom">bottom</div>
+		<div class="direction left">left</div>
+		<div class="direction right">right</div>
+		<div class="direction qian">qian</div>
+		<div class="direction hou">hou</div>
+		<div class="small">
+			<p class="direction top">top</p>
+			<p class="direction bottom">bottom</p>
+			<p class="direction left">left</p>
+			<p class="direction right">right</p>
+			<p class="direction qian">qian</p>
+			<p class="direction hou">hou</p>
+		</div>
+	</div>
+ </div>
+
+ </body>
+</html>
